@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Autopark";
+}
+
+<h2>Sorted Cars by Brand</h2>
+
+<table>
+    <tr>
+        <th>CarID</th>
+        <th>Brand</th>
+        <th>Model</th>
+        <th>Year</th>
+    </tr>
+    @foreach (var car in sortedCarsByBrand)
+    {
+        <tr>
+            <td>@car.CarID</td>
+            <td>@car.Brand</td>
+            <td>@car.Model</td>
+            <td>@car.Year</td>
+        </tr>
+    }
+</table>
+
+@section styles {
+    <link rel="stylesheet" href="~/css/site.css" />
+}
